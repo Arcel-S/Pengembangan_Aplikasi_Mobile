@@ -1,35 +1,60 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
+# Tugas Praktikum 1: Pengenalan Kotlin Multiplatform & Setup Environment
 
-* [/iosApp](./iosApp/iosApp) contains an iOS application. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
-
-### Running the apps
-
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
-
-- Android app: `./gradlew :androidApp:assembleDebug`
-- Desktop app:
-  - Hot reload: `./gradlew :desktopApp:hotRun --auto`
-  - Standard run: `./gradlew :desktopApp:run`
-- iOS app: open the [/iosApp](./iosApp) directory in Xcode and run it from there.
-
-### Running tests
-
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
-
-- Android tests: `./gradlew :shared:testAndroidHostTest`
-- Desktop tests: `./gradlew :shared:jvmTest`
-- iOS tests: `./gradlew :shared:iosSimulatorArm64Test`
+Mata Kuliah: **Pengembangan Aplikasi Mobile (IF25-22017)**  
+Program Studi Teknik Informatika — Institut Teknologi Sumatera
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## 👤 Identitas Mahasiswa
+* **Nama:** Marcel Kevin Togap Siagian
+* **NIM:** 123140054
+* **Kelas:** Pengembangan Aplikasi Mobile
+
+---
+
+## 📱 Deskripsi Aplikasi
+Aplikasi ini dibangun menggunakan **Kotlin Multiplatform (KMP)** dan **Compose Multiplatform**. Aplikasi menampilkan salam dengan identitas mahasiswa (Nama dan NIM) serta mendeteksi platform target yang sedang berjalan secara dinamis menggunakan mekanisme Kotlin Multiplatform (`expect` / `actual`).
+
+Aplikasi mendukung multiplatform:
+1. **Android** (Dijalankan di perangkat fisik smartphone)
+2. **Desktop** (JVM / Linux Desktop)
+3. **iOS** *(Opsional)*
+
+---
+
+## 📸 Tangkapan Layar (Screenshots)
+
+### 1. Tampilan pada Android (HP Fisik)
+<img src="docs/screenshot-android.png" width="300" alt="Screenshot Android" />
+
+### 2. Tampilan pada Desktop (Linux JVM)
+<img src="docs/screenshot-desktop.png" width="500" alt="Screenshot Desktop" />
+
+---
+
+## 🚀 Cara Menjalankan Proyek
+
+### 1. Menjalankan di Android
+* **Melalui Android Studio:**
+  1. Buka proyek ini di Android Studio.
+  2. Pilih konfigurasi **`androidApp`**.
+  3. Hubungkan perangkat fisik Android (aktifkan USB Debugging) atau gunakan Emulator.
+  4. Klik tombol **Run ▶️**.
+* **Melalui Terminal:**
+  ```bash
+  ./gradlew :androidApp:installDebug
+  ```
+
+### 2. Menjalankan di Desktop (Linux)
+Jalankan perintah berikut di terminal:
+```bash
+./gradlew :desktopApp:run
+```
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+* **Bahasa:** Kotlin 2.x
+* **UI Toolkit:** Compose Multiplatform
+* **Build Tool:** Gradle (Kotlin DSL)
+* **Target:** Android & Desktop (JVM)
