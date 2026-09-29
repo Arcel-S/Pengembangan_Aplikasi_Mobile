@@ -26,3 +26,8 @@ compose.desktop {
         }
     }
 }
+
+tasks.register<JavaExec>("captureScreenshots") {
+    mainClass.set("com.example.myfirstkmpapp.ScreenshotCaptureKt")
+    classpath = sourceSets["main"].runtimeClasspath
+}
