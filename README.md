@@ -106,9 +106,9 @@ open iosApp/iosApp.xcworkspace
 
 Berikut adalah hasil tangkapan layar antarmuka aplikasi **"My Profile App"** pada berbagai kondisi:
 
-| 1. Tampilan Utama (Default) | 2. Detail Terbuka (Bonus Animasi) | 3. Pop-up Dialog "Hubungi" |
-| :---: | :---: | :---: |
-| <img src="resources/screenshots/01_profile_default.png" width="260" alt="Tampilan Utama Default" /> | <img src="resources/screenshots/02_profile_expanded.png" width="260" alt="Detail Akademik Terbuka" /> | <img src="resources/screenshots/03_profile_dialog.png" width="260" alt="Pop-up Dialog Hubungi" /> |
+| 1. Tampilan Utama (Default) |                                      2. Detail Terbuka (Bonus Animasi)                                       | 3. Pop-up Dialog "Hubungi" |
+| :---: |:------------------------------------------------------------------------------------------------------------:| :---: |
+| <img src="resources/screenshots/01_profile_default.png" width="260" alt="Tampilan Utama Default" /> | <img src="resources/screenshots/02_profile_detail_academic.png" width="260" alt="Detail Akademik Terbuka" /> | <img src="resources/screenshots/03_profile_dialog.png" width="260" alt="Pop-up Dialog Hubungi" /> |
 
 > **Keterangan Tangkapan Layar:**
 > 1. **Tampilan Utama (Default)**: Memperlihatkan header profil ber-avatar melingkar (`CircleShape`), identitas nama Marcel, kartu *"Tentang Saya"*, kartu *"Informasi Kontak"* (Email, Phone, Location), dan kartu *"Detail Akademik"* (collapsed).
